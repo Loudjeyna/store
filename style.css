@@ -316,3 +316,108 @@ body.english-mode button[data-lang-en] { display: inline-block; }
     .hero-text { padding: 0; margin-top: 30px; }
     .hero h1 { font-size: 2.2rem; }
 }
+
+/* تنسيق صفحة السلة */
+.cart-section {
+    padding: 80px 0;
+    min-height: 60vh;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    justify-content: space-between;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.cart-item-details h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.cart-price {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.remove-btn:hover { background: #d63031; }
+
+.cart-summary {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: right;
+    margin-top: 20px;
+}
+
+html[dir="ltr"] .cart-summary { text-align: left; }
+
+.cart-summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+#cart-total {
+    color: var(--primary-blue);
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #25D366; /* لون واتساب */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.checkout-btn:hover { background-color: #128C7E; }
+
+.empty-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 40px;
+}

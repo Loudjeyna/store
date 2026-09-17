@@ -19,18 +19,21 @@
 <body>
 
     <!-- Header -->
+    <!-- Header -->
     <header>
         <div class="container nav-container">
             
             <!-- زر القائمة في الموبايل -->
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
+            <!-- اللوجو: يعيدك للصفحة الرئيسية -->
             <div class="logo">
-                <!-- تأكدي من وجود صورة باسم logo.png في نفس المجلد -->
-                <img src="logo.png" alt="Bloom Store Logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Bloom Store Logo">
+                </a>
             </div>
             
-            <!-- تمت إضافة id="navLinks" هنا -->
+            <!-- القائمة العلوية -->
             <nav class="nav-links" id="navLinks">
                 <a href="#home">
                     <span data-lang-ar>الرئيسية</span>
@@ -50,17 +53,17 @@
                 </a>
             </nav>
             
-            <div class="cart-icon" onclick="alert('عربة التسوق فارغة حالياً!')">
+            <!-- أيقونة العربة -->
+            <a href="cart.html" class="cart-icon">
                 🛒
                 <span class="cart-badge" id="cart-count">0</span>
-            </div>
+            </a>
 
             <button class="lang-switch" onclick="toggleLanguage()">
                 English / العربية
             </button>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section id="home" class="hero container">
         <div class="hero-text">

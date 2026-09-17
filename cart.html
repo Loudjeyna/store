@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Store | السلة</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Bloom Store">
+                </a>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">
+                    <span data-lang-ar>الرئيسية</span><span data-lang-en>Home</span>
+                </a>
+                <a href="index.html#products">
+                    <span data-lang-ar>المنتجات</span><span data-lang-en>Products</span>
+                </a>
+            </nav>
+          <a href="cart.html" class="cart-icon">
+    🛒
+    <span class="cart-badge" id="cart-count">0</span>
+</a>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section container">
+        <h2 class="section-title">
+            <span data-lang-ar>سلة مشترياتك</span>
+            <span data-lang-en>Your Cart</span>
+        </h2>
+        
+        <div id="cart-items-container">
+            <!-- المنتجات ستظهر هنا -->
+        </div>
+
+        <div class="cart-summary">
+            <h3>
+                <span data-lang-ar>المجموع الكلي:</span>
+                <span data-lang-en>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </h3>
+            <a href="https://wa.me/YOURNUMBER" class="btn checkout-btn">
+                <span data-lang-ar>إتمام الطلب عبر واتساب</span>
+                <span data-lang-en>Checkout via WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Bloom Store</h3>
+                <p>&copy; 2026 Bloom Store.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
