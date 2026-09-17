@@ -234,3 +234,39 @@ body.english-mode button[data-lang-en] { display: inline-block; }
     .hero-text { padding: 0; margin-top: 30px; }
     .hero h1 { font-size: 2.2rem; }
 }
+/* تنسيق أيقونة العربة */
+.cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    margin-left: 15px; /* مسافة بينها وبين زر اللغة */
+    transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* تنسيق العداد الأحمر */
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+}
+
+/* ضبط مكان العداد في اللغة الإنجليزية */
+html[dir="ltr"] .cart-icon {
+    margin-left: 0;
+    margin-right: 15px;
+}

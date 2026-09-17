@@ -18,7 +18,16 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 
+let cartCount = 0; // متغير لحفظ عدد المنتجات
+
 function addToCart() {
+    // زيادة العداد
+    cartCount++;
+    
+    // تحديث الرقم في الصفحة
+    document.getElementById('cart-count').innerText = cartCount;
+    
+    // الرسالة القديمة
     const msgAr = "تمت الإضافة للسلة بنجاح! 🌸";
     const msgEn = "Added to cart successfully! 🌸";
     
