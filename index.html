@@ -13,10 +13,10 @@
     
     <!-- ربط ملفات CSS و JS -->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script> <!-- تم إصلاح الخطأ هنا -->
-</head> <!-- تم إغلاق الـ head -->
+    <script src="script.js"></script>
+</head>
 
-<body> <!-- بدء الـ body بشكل صحيح -->
+<body>
 
     <!-- Header -->
     <header>
@@ -49,10 +49,12 @@
                     <span data-lang-en>Contact</span>
                 </a>
             </nav>
-<div class="cart-icon" onclick="alert('عربة التسوق فارغة حالياً!')">
-    🛒
-    <span class="cart-badge" id="cart-count">0</span>
-</div>
+            
+            <div class="cart-icon" onclick="alert('عربة التسوق فارغة حالياً!')">
+                🛒
+                <span class="cart-badge" id="cart-count">0</span>
+            </div>
+
             <button class="lang-switch" onclick="toggleLanguage()">
                 English / العربية
             </button>
@@ -130,67 +132,9 @@
                 <span data-lang-ar>وصل حديثاً</span>
                 <span data-lang-en>New Arrivals</span>
             </h2>
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/hairpin/300/300" alt="Product" class="product-img">
-                    <div class="product-info">
-                        <div class="product-title">
-                            <span data-lang-ar>دبابيس شعر زهرية</span>
-                            <span data-lang-en>Floral Hair Pins</span>
-                        </div>
-                        <div class="product-price">$5.00</div>
-                    </div>
-                    <button class="btn add-btn" onclick="addToCart()">
-                        <span data-lang-ar>أضيفي للسلة</span>
-                        <span data-lang-en>Add to Cart</span>
-                    </button>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/bag/300/300" alt="Product" class="product-img">
-                    <div class="product-info">
-                        <div class="product-title">
-                            <span data-lang-ar>حقبة كيوت صغيرة</span>
-                            <span data-lang-en>Cute Mini Bag</span>
-                        </div>
-                        <div class="product-price">$12.50</div>
-                    </div>
-                    <button class="btn add-btn" onclick="addToCart()">
-                        <span data-lang-ar>أضيفي للسلة</span>
-                        <span data-lang-en>Add to Cart</span>
-                    </button>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/stationery/300/300" alt="Product" class="product-img">
-                    <div class="product-info">
-                        <div class="product-title">
-                            <span data-lang-ar>مجموعة دفاتر ميمو</span>
-                            <span data-lang-en>Memo Notebooks Set</span>
-                        </div>
-                        <div class="product-price">$8.00</div>
-                    </div>
-                    <button class="btn add-btn" onclick="addToCart()">
-                        <span data-lang-ar>أضيفي للسلة</span>
-                        <span data-lang-en>Add to Cart</span>
-                    </button>
-                </div>
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/phonecase/300/300" alt="Product" class="product-img">
-                    <div class="product-info">
-                        <div class="product-title">
-                            <span data-lang-ar>كفر جوال ناعم</span>
-                            <span data-lang-en>Soft Phone Case</span>
-                        </div>
-                        <div class="product-price">$6.00</div>
-                    </div>
-                    <button class="btn add-btn" onclick="addToCart()">
-                        <span data-lang-ar>أضيفي للسلة</span>
-                        <span data-lang-en>Add to Cart</span>
-                    </button>
-                </div>
+            <!-- هذا المكان فارغ الآن، سيقوم JavaScript بملئه -->
+            <div class="products-grid" id="products-container">
+                <!-- المنتجات ستظهر هنا تلقائياً بواسطة JavaScript -->
             </div>
         </div>
     </section>
@@ -203,14 +147,11 @@
                 <p>
                     <span data-lang-ar>تابعينا على انستقرام</span>
                     <span data-lang-en>Follow us on Instagram</span>
-                    
                 </p>
             </div>
             <div class="footer-links">
                  <a href="https://www.instagram.com/bloom_store_16/" target="_blank">Instagram</a>
-    
                 <a href="https://www.facebook.com/share/1E1LSRcoNs/" target="_blank">Facebook</a>
-    
                 <a href="#">TikTok</a>
             </div>
             <div class="copyright">
