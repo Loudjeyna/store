@@ -6,24 +6,32 @@
     <title>Bloom Store | قطع كيوت و أنثوية</title>
     <meta name="description" content="متجر بلوم - وجهتك للقطع الكيوت والأنثوية المستوردة بعناية.">
     
-    <!-- استيراد خط 'Cairo' لدعم العربية والإنجليزية بشكل جميل -->
+    <!-- استيراد الخط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     
-</head>
-<body>
+    <!-- ربط ملفات CSS و JS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> <!-- تم إصلاح الخطأ هنا -->
+</head> <!-- تم إغلاق الـ head -->
+
+<body> <!-- بدء الـ body بشكل صحيح -->
 
     <!-- Header -->
     <header>
         <div class="container nav-container">
+            
+            <!-- زر القائمة في الموبايل -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
             <div class="logo">
-                <!-- اللوجو المرفق -->
+                <!-- تأكدي من وجود صورة باسم logo.png في نفس المجلد -->
                 <img src="logo.png" alt="Bloom Store Logo">
             </div>
             
-            <nav class="nav-links">
+            <!-- تمت إضافة id="navLinks" هنا -->
+            <nav class="nav-links" id="navLinks">
                 <a href="#home">
                     <span data-lang-ar>الرئيسية</span>
                     <span data-lang-en>Home</span>
@@ -65,7 +73,6 @@
             </a>
         </div>
         <div class="hero-image">
-            <!-- صورة توضيحية لطيفة -->
             <img src="https://picsum.photos/seed/cuteGirl/500/500" alt="Cute Aesthetic">
         </div>
     </section>
@@ -197,43 +204,14 @@
             </div>
             <div class="footer-links">
                 <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
                 <a href="#">TikTok</a>
             </div>
             <div class="copyright">
-                &copy; 2023 Bloom Store. All rights reserved.
+                &copy; 2026 Bloom Store. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript بسيط لتغيير اللغة -->
-    <script>
-        function toggleLanguage() {
-            const body = document.body;
-            const html = document.documentElement;
-            
-            // عكس الحالة
-            body.classList.toggle('english-mode');
-            
-            // تغيير اتجاه الصفحة
-            if (body.classList.contains('english-mode')) {
-                html.setAttribute('dir', 'ltr');
-                html.setAttribute('lang', 'en');
-            } else {
-                html.setAttribute('dir', 'rtl');
-                html.setAttribute('lang', 'ar');
-            }
-        }
-
-        function addToCart() {
-            // محاكاة بسيطة للإضافة للسلة
-            const msgAr = "تمت الإضافة للسلة بنجاح! 🌸";
-            const msgEn = "Added to cart successfully! 🌸";
-            
-            // التحقق من اللغة الحالية
-            const isEnglish = document.body.classList.contains('english-mode');
-            alert(isEnglish ? msgEn : msgAr);
-        }
-    </script>
 </body>
 </html>
