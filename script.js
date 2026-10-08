@@ -1,30 +1,31 @@
 // --- 1. قائمة المنتجات (اضيفي منتجاتك هنا بسهولة) ---
 const products = [
     {
-        img: "pic1.png",
+        img: "https://picsum.photos/seed/hairpin/300/300",
         nameAr: "دبابيس شعر زهرية",
         nameEn: "Floral Hair Pins",
-        price: "$5.00"
+        price: "500 DA" // تم التغيير
     },
     {
-        img: "pic1.png",
+        img: "https://picsum.photos/seed/bag/300/300",
         nameAr: "حقبة كيوت صغيرة",
         nameEn: "Cute Mini Bag",
-        price: "$12.50"
+        price: "1200 DA" // تم التغيير
     },
     {
-        img: "pic1.png",
+        img: "https://picsum.photos/seed/stationery/300/300",
         nameAr: "مجموعة دفاتر ميمو",
         nameEn: "Memo Notebooks Set",
-        price: "$8.00"
+        price: "800 DA" // تم التغيير
     },
     {
-        img: "pic1.png",
+        img: "https://picsum.photos/seed/phonecase/300/300",
         nameAr: "كفر جوال ناعم",
         nameEn: "Soft Phone Case",
-        price: "$6.00"
+        price: "600 DA" // تم التغيير
     }
-    // عند إضافة منتج جديد، انسخ أحد الأقواس {} بالأعلى وأضفه هنا
+
+
 ];
 
 // --- 2. المتغيرات العامة ---
@@ -92,26 +93,36 @@ function updateCartCount() {
 }
 
 // --- 6. دالة عرض محتويات السلة (تعمل في صفحة cart.html) ---
+// --- 6. دالة عرض محتويات السلة (تعمل في صفحة cart.html) ---
+// --- 6. دالة عرض محتويات السلة (تعمل في صفحة cart.html) ---
 function displayCart() {
     const container = document.getElementById('cart-items-container');
     const totalElement = document.getElementById('cart-total');
+    const summaryElement = document.querySelector('.cart-summary');
+    const checkoutBtn = document.querySelector('.checkout-btn'); // الإمساك بزر الواتساب
     
-    if (!container) return; // إذا لم نكن في صفحة السلة، لا تفعل شيئاً
+    if (!container) return; 
 
     const storedCart = localStorage.getItem('bloomCart');
     const cart = storedCart ? JSON.parse(storedCart) : [];
 
     if (cart.length === 0) {
         container.innerHTML = '<p class="empty-msg">سلتك فارغة حالياً 🛒</p>';
-        totalElement.innerText = '$0.00';
+       totalElement.innerText = totalPrice + ' DA';
+        if (summaryElement) summaryElement.style.display = 'none'; 
         return;
     }
 
     let cartHTML = '<ul class="cart-list">';
     let totalPrice = 0;
+    
+    // بناء نص رسالة الواتساب
+    let whatsappMessage = "مرحباً! أود طلب المنتجات التالية من Bloom Store 🌸:\n\n";
 
     cart.forEach((item, index) => {
-        totalPrice += parseFloat(item.price.replace('$', ''));
+       totalPrice += parseFloat(item.price.replace(' DA', ''));
+        
+        // إضافة المنتج للصفحة
         cartHTML += `
             <li class="cart-item">
                 <img src="${item.img}" alt="Product">
@@ -124,11 +135,31 @@ function displayCart() {
                 <button class="remove-btn" onclick="removeFromCart(${index})">✕</button>
             </li>
         `;
+        
+        // إضافة المنتج لنص رسالة الواتساب
+        whatsappMessage += `- ${item.nameAr} (${item.price})\n`;
     });
 
     cartHTML += '</ul>';
     container.innerHTML = cartHTML;
-    totalElement.innerText = '$' + totalPrice.toFixed(2);
+    totalElement.innerText = 'DA' + totalPrice.toFixed(2);
+    
+    // إضافة المجموع لنص الرسالة
+   whatsappMessage += `\nالمجموع الكلي: ${totalPrice} DA\nشكراً!`;
+    // تحديث رابط زر الواتساب ليتضمن الرسالة
+    // ملاحظة: استبدلي 967123456789 برقمك الحقيقي بالصيغة الدولية (بدون + أو أصفار)
+       // تحديث رابط زر الواتساب ليتضمن الرسالة
+    if (checkoutBtn) {
+        // 1. ضعي رقمك هنا (الرمز الدولي بدون + ثم الرقم)
+        // مثال للسعودية: 966501234567
+        // مثال لمصر: 201012345678
+        const phoneNum = "213778663946"; // <-- يجب تغييره لرقمك الحقيقي
+        
+        // 2. استخدام الرابط الرسمي api.whatsapp.com بدلاً من wa.me
+        checkoutBtn.href = `https://api.whatsapp.com/send?phone=${phoneNum}&text=${encodeURIComponent(whatsappMessage)}`;
+    }
+    
+    if (summaryElement) summaryElement.style.display = 'block'; 
 }
 
 // --- 7. دالة حذف منتج ---

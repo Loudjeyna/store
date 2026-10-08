@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom Store | السلة</title>
+    <!-- إضافة الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -13,23 +18,33 @@
     <header>
         <div class="container nav-container">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            
             <div class="logo">
                 <a href="index.html">
                     <img src="logo.png" alt="Bloom Store">
                 </a>
             </div>
+            
             <nav class="nav-links" id="navLinks">
                 <a href="index.html">
-                    <span data-lang-ar>الرئيسية</span><span data-lang-en>Home</span>
+                    <span data-lang-ar>الرئيسية</span>
+                    <span data-lang-en>Home</span>
                 </a>
                 <a href="index.html#products">
-                    <span data-lang-ar>المنتجات</span><span data-lang-en>Products</span>
+                    <span data-lang-ar>المنتجات</span>
+                    <span data-lang-en>Products</span>
                 </a>
             </nav>
-          <a href="cart.html" class="cart-icon">
-    🛒
-    <span class="cart-badge" id="cart-count">0</span>
-</a>
+            
+            <a href="cart.html" class="cart-icon">
+                🛒
+                <span class="cart-badge" id="cart-count">0</span>
+            </a>
+
+            <!-- زر تغيير اللغة (مهم جداً) -->
+            <button class="lang-switch" onclick="toggleLanguage()">
+                English / العربية
+            </button>
         </div>
     </header>
 
@@ -41,16 +56,17 @@
         </h2>
         
         <div id="cart-items-container">
-            <!-- المنتجات ستظهر هنا -->
+            <!-- المنتجات ستظهر هنا بواسطة JavaScript -->
         </div>
 
         <div class="cart-summary">
             <h3>
                 <span data-lang-ar>المجموع الكلي:</span>
                 <span data-lang-en>Total:</span>
-                <span id="cart-total">$0.00</span>
+                <span id="cart-total">0 DA</span>
             </h3>
-            <a href="https://wa.me/0778663946" class="btn checkout-btn" >
+            <!-- رابط الواتساب: اتركه # لأن الـ JS سيقوم بوضع الرابط الصحيح والرسالة تلقائياً -->
+            <a href="#" class="btn checkout-btn">
                 <span data-lang-ar>إتمام الطلب عبر واتساب</span>
                 <span data-lang-en>Checkout via WhatsApp</span>
             </a>
@@ -63,6 +79,10 @@
             <div class="footer-content">
                 <h3>Bloom Store</h3>
                 <p>&copy; 2026 Bloom Store.</p>
+            </div>
+            <div class="footer-links">
+                 <a href="https://www.instagram.com/bloom_store_16/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/share/1E1LSRcoNs/" target="_blank">Facebook</a>
             </div>
         </div>
     </footer>
