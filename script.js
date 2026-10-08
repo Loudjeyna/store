@@ -1,25 +1,25 @@
 // --- 1. قائمة المنتجات (اضيفي منتجاتك هنا بسهولة) ---
 const products = [
     {
-        img: "https://picsum.photos/seed/hairpin/300/300",
+        img: "pic1.png",
         nameAr: "دبابيس شعر زهرية",
         nameEn: "Floral Hair Pins",
         price: "$5.00"
     },
     {
-        img: "https://picsum.photos/seed/bag/300/300",
+        img: "pic1.png",
         nameAr: "حقبة كيوت صغيرة",
         nameEn: "Cute Mini Bag",
         price: "$12.50"
     },
     {
-        img: "https://picsum.photos/seed/stationery/300/300",
+        img: "pic1.png",
         nameAr: "مجموعة دفاتر ميمو",
         nameEn: "Memo Notebooks Set",
         price: "$8.00"
     },
     {
-        img: "https://picsum.photos/seed/phonecase/300/300",
+        img: "pic1.png",
         nameAr: "كفر جوال ناعم",
         nameEn: "Soft Phone Case",
         price: "$6.00"
