@@ -4,19 +4,19 @@
 // --- 1. قائمة المنتجات ---
 const products = [
     {
-        img: "https://images.unsplash.com/photo-1596666833190-5f1db60d076c?w=300&h=300&fit=crop",
+        img: "logo.png",
         nameAr: "دبابيس شعر زهرية",
         nameEn: "Floral Hair Pins",
         price: "500 DA"
     },
     {
-        img: "https://images.unsplash.com/photo-1590878206465-3c21b7e2216a?w=300&h=300&fit=crop",
+        img: "logo.png",
         nameAr: "حقبة كيوت صغيرة",
         nameEn: "Cute Mini Bag",
         price: "1200 DA"
     },
     {
-        img: "https://images.unsplash.com/photo-1531317299424-03db9b68c705?w=300&h=300&fit=crop",
+        img: "logo.png",
         nameAr: "مجموعة دفاتر ميمو",
         nameEn: "Memo Notebooks Set",
         price: "800 DA"
